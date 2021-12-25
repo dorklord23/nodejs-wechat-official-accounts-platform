@@ -2,7 +2,7 @@ import express from "express";
 import crypto from 'crypto'
 // rest of the code remains same
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.get("/", (req, res) => {
   const shasum = crypto.createHash('sha1')
