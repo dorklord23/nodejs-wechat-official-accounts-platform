@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   console.log("encryptedString:", encryptedString)
 
   if (encryptedString === signature) {
-    res.send(echostr)
+    return res.send(echostr)
   }
 
   res.send(signature)
